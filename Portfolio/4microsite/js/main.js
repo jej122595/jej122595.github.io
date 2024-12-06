@@ -1,0 +1,31 @@
+window.addEventListener('DOMContentLoaded',function(){gsap.registerPlugin(ScrollTrigger);const stage=document.querySelector('#container');const container=Scrollbar.init(stage,{damping:0.1,delegateTo:stage,continuousScrolling:!0,alwaysShowTracks:!1,});container.setPosition(0,0);container.track.xAxis.element.remove();ScrollTrigger.scrollerProxy("body",{scrollTop(value){if(arguments.length){container.scrollTop=value}
+return container.scrollTop}});container.addListener((e)=>{let scrollTop=container.scrollTop;console.log(scrollTop);$('.box1').css('transform',`translateY(${scrollTop * 0.7}px)`)
+if(scrollTop>=0){$('.sec01_text2').addClass('on')}
+if(scrollTop>=600){$('.sec02_text2').addClass('on')}
+if(scrollTop>=700){$('.sec02_text3').addClass('on')}
+if(scrollTop>=1570){$('.sec03_text1').addClass('on')}
+if(scrollTop>=1810){$('.sec03_text2').addClass('on')}
+if(scrollTop>=1930){$('.sec03_text3').addClass('on')}
+if(scrollTop>=2670){$('.sec04_draw1').addClass('on')}
+if(scrollTop>=2800){$('.sec04_draw2').addClass('on')}
+if(scrollTop>=2963){$('.sec04_draw3').addClass('on')}
+if(scrollTop>=3676){$('.sec05_text1').addClass('on')}
+if(scrollTop>=4292){$('.sec05_test1').addClass('on')}
+if(scrollTop>=4752){$('.sec05_text2').addClass('on')}
+if(scrollTop>=5222){$('.sec05_test2').addClass('on')}
+if(scrollTop>=5890){$('.sec05_test3').addClass('on')}
+if(scrollTop>=6008){$('.sec05_text3').addClass('on')}
+if(scrollTop>=6681){$('.sec06_test').addClass('on')}
+if(scrollTop>=7053){$('.sec06_text').addClass('on')}
+if(scrollTop>=8285){$('.sec07_text1').addClass('on')}
+if(scrollTop>=9350){$('.sec07_text2').addClass('on')}
+if(scrollTop>=11234){$('.sec09_text1').addClass('on')}
+if(scrollTop>=13115){$('.sec09_text2').addClass('on')}
+if(scrollTop>=13621){$('.sec09_test2').addClass('on')}
+if(scrollTop>=14333){$('.sec09_test3').addClass('on')}
+if(scrollTop>=14724){$('.sec09_text3').addClass('on')}
+if(scrollTop>=15720){$('.sec09_text4').addClass('on')}
+if(scrollTop>=11234){$('.sec10_text0').addClass('on')}
+if(scrollTop>=13290){$('.sec10_text0').addClass('on')}});$('.startPoint').click(function(){container.scrollTo(0,0,600,{callback:()=>console.log('done!'),easing:easing.easeInOutCirc,})});(function(){setTimeout(()=>{$('.main').addClass('on')},1000)
+$('.logo').addClass('on')
+$('.bg_top').addClass('on');$('.main_title1').addClass('on');$('.main_title2').addClass('on');$('.sub_title').addClass('on')})()})
